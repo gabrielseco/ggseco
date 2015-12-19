@@ -25,6 +25,9 @@ module.exports = {
         },
         imagenURL:{
           type:'string'
+        },
+        imagenFD:{
+          type:'string'
         }
     }
 };
