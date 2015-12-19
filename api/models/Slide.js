@@ -14,9 +14,13 @@ module.exports = {
             autoIncrement: true,
             primaryKey: true
         },
+        activo: {
+          type:'boolean',
+          defaultsTo: false
+        },
         titulo:{
           type:'string'
-        },
+        },  
         enlace:{
           type:'string'
         },
