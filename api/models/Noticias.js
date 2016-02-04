@@ -32,25 +32,24 @@ module.exports = {
         texto:{
           type:'text'
         },
-        imagen: {
+        imagenURL: {
           type:'string'
         },
-        enlace:{
+        imagenFD: {
+          type:'string'
+        },
+        slug:{
           type:'string',
           unique:true,
           required: true
         },
-        categorias:{
-          collection:'categorias',
+        categorias_noticias: {
+          collection:'categorias_noticias',
           via:'noticias'
         },
-        tags:{
-          collection:'tags',
+        tags_noticias: {
+          collection:'tags_noticias',
           via:'noticias'
         },
-        galeria:{
-          collection:'noticias',
-          via:'galeria'
-        }
     }
 };

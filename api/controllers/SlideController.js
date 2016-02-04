@@ -7,12 +7,22 @@
 
 module.exports = {
 
+	restricted: function (req, res){
+		return res.ok('You are authenticated');
+	},
+	open: function(req, res){
+		return res.ok('Open');
+	},
+	jwt: function(req, res){
+		return res.ok('You have a token');
+	},
+
 	uploadImagen: function (req, res) {
 
 		req.validate({
 	     id: 'string'
 	  });
-		
+
   req.file('file').upload({
     // don't allow the total upload size to exceed ~10MB
     maxBytes: 10000000,
